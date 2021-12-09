@@ -17,7 +17,7 @@ conda activate grasp_env
 Use pip to install the dependencies. If you have a gpu you might need to install tensorflow based on your system requirements.
 
 ```
-pip install -e .
+(grasp_env)pip install -e .
 ```
 
 ## Run Models
@@ -32,8 +32,8 @@ For running models *'manipulation_main/training/train_stable_baselines.py'* take
 
 For running functionality *run* sub-parser needs to be passed to the script.
 
-```
-python manipulation_main/training/train_stable_baselines.py run --model trained_models/SAC_full_depth_1mbuffer/best_model/best_model.zip -v -t
+```python
+(grasp_env)python manipulation_main/training/train_stable_baselines.py run --model trained_models/SAC_depth_1mbuffer/best_model/best_model.zip -v -t
 ```
 
 
@@ -50,7 +50,7 @@ For training models *'manipulation_main/training/train_stable_baselines.py'* tak
 For training functionality *train* sub-parser needs to be passed to the script.
 
 ```
-python manipulation_main/training/train_stable_baselines.py train --config config/gripper_grasp.yaml --algo SAC --model_dir trained_models/SAC_full --timestep 100000 -v
+(grasp_env)python manipulation_main/training/train_stable_baselines.py train --config config/gripper_grasp.yaml --algo SAC --model_dir trained_models/SAC_full --timestep 100000 -v
 ```
 
 ## Running the tests
@@ -58,7 +58,7 @@ python manipulation_main/training/train_stable_baselines.py train --config confi
 To run the gripperEnv related test use
 
 ```
-pytest tests_gripper
+(grasp_env)pytest tests_gripper
 ```
 
 * **Domain and Scene Transfer**

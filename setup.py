@@ -21,5 +21,7 @@ setup(
         'scikit-learn',
         'tqdm',
         'paramiko',
+        'numba',
+        'h5py==2.10.0'
     ],
 )
