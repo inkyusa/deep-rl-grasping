@@ -7,17 +7,17 @@ Master's thesis [PDF](https://github.com/BarisYazici/masters_thesis/blob/master/
 
 Install anaconda. Start a clean conda environment.
 
-```
-conda create -n grasp_env python=3.6
-conda activate grasp_env
+```bash
+$conda create -n grasp_env python=3.6
+$conda activate grasp_env
 ```
 
 ## Installation
 
 Use pip to install the dependencies. If you have a gpu you might need to install tensorflow based on your system requirements.
 
-```
-(grasp_env)pip install -e .
+```bash
+(grasp_env)$pip install -e .
 ```
 
 ## Run Models
@@ -33,7 +33,7 @@ For running models *'manipulation_main/training/train_stable_baselines.py'* take
 For running functionality *run* sub-parser needs to be passed to the script.
 
 ```python
-(grasp_env)python manipulation_main/training/train_stable_baselines.py run --model trained_models/SAC_depth_1mbuffer/best_model/best_model.zip -v -t
+(grasp_env)$python manipulation_main/training/train_stable_baselines.py run --model trained_models/SAC_depth_1mbuffer/best_model/best_model.zip -v -t
 ```
 
 
@@ -49,16 +49,16 @@ For training models *'manipulation_main/training/train_stable_baselines.py'* tak
 
 For training functionality *train* sub-parser needs to be passed to the script.
 
-```
-(grasp_env)python manipulation_main/training/train_stable_baselines.py train --config config/gripper_grasp.yaml --algo SAC --model_dir trained_models/SAC_full --timestep 100000 -v
+```bash
+(grasp_env)$python manipulation_main/training/train_stable_baselines.py train --config config/gripper_grasp.yaml --algo SAC --model_dir trained_models/SAC_full --timestep 100000 -v
 ```
 
 ## Running the tests
 
 To run the gripperEnv related test use
 
-```
-(grasp_env)pytest tests_gripper
+```bash
+(grasp_env)$pytest tests_gripper
 ```
 
 * **Domain and Scene Transfer**
